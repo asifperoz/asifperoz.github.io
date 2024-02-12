@@ -1,9 +1,9 @@
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
-  background-color: #2196F3;
   max-width: 300px;
   margin: auto;
+  padding-top: 10px;
 }
 
 .grid-container > div {
