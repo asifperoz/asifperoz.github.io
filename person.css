@@ -1,0 +1,35 @@
+.div1 {
+	padding: 0 7px;
+	font-size: 18px;
+	text-align: justify;
+	text-justify: inter-word;
+}
+h3 {
+	border-bottom: 2px solid lightgray;
+	margin-bottom: 5px;
+}
+h2 {
+	margin-bottom: 7px;
+}
+.image {
+	width:300px; 
+	float: left; 
+	margin: 5px; 
+	margin-top:10px;
+	margin-right:10px;
+	border: 3px solid green;
+	border-radius: 10px;
+}
+
+@media (max-width: 550px) {
+  .image {
+	float: none;
+	display: block;
+	margin: 5px; 
+	margin-left: auto;
+	margin-right: auto;
+  }
+  .div1 {
+	clear: left;
+  }
+}
