@@ -1,10 +1,11 @@
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
-  max-width: 600px;
-  margin: auto;
+  max-width: 1000px;
   gap: 10px;
   padding-top: 10px;
+  margin: auto;
+  justify-content: center;
 }
 
 /* .grid-container > div { */
@@ -32,4 +33,17 @@ img {
 
 .container {
   padding: 2px 16px;
+}
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 940px) {
+  .grid-container {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media (max-width: 625px) {
+  .grid-container {
+    grid-template-columns: auto;
+  }
 }
