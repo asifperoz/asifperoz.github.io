@@ -22,11 +22,14 @@ btn.addEventListener("click", function(){
 });
 
 onValue(shoppingListInDb, function(snapshot){
-	shoppingList.innerHTML = '';
-	if(!snapshot.val()) return;
+	
+	if(!snapshot.exists()){
+		shoppingList.innerHTML = 'No Items Exists';
+		return;
+	} 
 	const valList = Object.entries(snapshot.val());
 	console.log("the snapshot is: ", valList);
-	
+	shoppingList.innerHTML = '';
 	valList.forEach((item)=>{
 		// shoppingList.innerHTML += `<li>${val}</li>`;
 		appendItemToShoppingListEl(item);
