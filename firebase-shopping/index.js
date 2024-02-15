@@ -16,6 +16,7 @@ const shoppingList = document.getElementById("shopping-list");
 
 btn.addEventListener("click", function(){
 	let value = input.value;
+	if(value.trim() == '') return;
 	console.log("the value is: ", value);
 	push(shoppingListInDb, value);
 	input.value = "";
@@ -34,6 +35,7 @@ onValue(shoppingListInDb, function(snapshot){
 		// shoppingList.innerHTML += `<li>${val}</li>`;
 		appendItemToShoppingListEl(item);
 	});
+	window.scrollTo(0, shoppingList.scrollHeight);
 });
 
 function appendItemToShoppingListEl(item){
