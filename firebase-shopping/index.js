@@ -30,10 +30,14 @@ input.addEventListener("keydown", function (event) {
 
 function sendData() {
   let value = input.value;
-  if (value.trim() == "") return;
+  if (value.trim() == "") {
+    input.focus();
+    return;
+  }
   console.log("the value is: ", value);
   push(shoppingListInDb, value);
   input.value = "";
+  input.focus();
 }
 
 onValue(shoppingListInDb, function (snapshot) {
