@@ -36,7 +36,6 @@ function sendData() {
   input.focus();
   let value = input.value;
   if (value.trim() == "") return;
-  console.log("the value is: ", value);
   push(shoppingListInDb, value);
   input.value = "";
 }
@@ -47,7 +46,6 @@ onValue(shoppingListInDb, function (snapshot) {
     return;
   }
   const valList = Object.entries(snapshot.val());
-  console.log("the snapshot is: ", valList);
   shoppingList.innerHTML = "";
   valList.forEach((item) => {
     // shoppingList.innerHTML += `<li>${val}</li>`;
