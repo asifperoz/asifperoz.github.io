@@ -56,3 +56,12 @@ ul li {
   font-family: sans-serif;
   align-self: end;
 }
+
+h3.greet {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  background-color: chartreuse;
+  text-align: center;
+  padding: 5px;
+}
