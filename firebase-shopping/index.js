@@ -27,6 +27,9 @@ input.addEventListener("keydown", function (event) {
     sendData();
   }
 });
+btn.addEventListener("touchend", (e) => {
+  e.preventDefault();
+});
 
 function sendData() {
   input.focus();
