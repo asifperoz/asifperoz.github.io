@@ -15,7 +15,6 @@ const appSettings = {
 const app = initializeApp(appSettings);
 const database = getDatabase(app);
 const shoppingListInDb = ref(database, "shoppingList");
-console.log(app);
 
 const btn = document.getElementById("btn");
 const input = document.getElementById("name-id");
@@ -55,7 +54,6 @@ onValue(shoppingListInDb, function (snapshot) {
 });
 
 function appendItemToShoppingListEl(item) {
-  const itemVal = item[1];
   let newEl = document.createElement("li");
   newEl.textContent = item[1];
   newEl.addEventListener("dblclick", function () {
