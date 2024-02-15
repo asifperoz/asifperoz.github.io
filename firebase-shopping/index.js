@@ -29,15 +29,12 @@ input.addEventListener("keydown", function (event) {
 });
 
 function sendData() {
+  input.focus();
   let value = input.value;
-  if (value.trim() == "") {
-    input.focus();
-    return;
-  }
+  if (value.trim() == "") return;
   console.log("the value is: ", value);
   push(shoppingListInDb, value);
   input.value = "";
-  input.focus();
 }
 
 onValue(shoppingListInDb, function (snapshot) {
