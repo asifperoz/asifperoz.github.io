@@ -29,6 +29,7 @@ input.addEventListener("keydown", function (event) {
 });
 btn.addEventListener("touchend", (e) => {
   e.preventDefault();
+  sendData();
 });
 
 function sendData() {
