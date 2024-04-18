@@ -9,7 +9,7 @@ import {
 
 const appSettings = {
   databaseURL:
-    "https://shopping-c936f-default-rtdb.europe-west1.firebasedatabase.app/",
+    "https://test-eec64-default-rtdb.europe-west1.firebasedatabase.app/",
 };
 
 const app = initializeApp(appSettings);
